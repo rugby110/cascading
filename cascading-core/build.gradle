@@ -60,3 +60,8 @@ javadoc {
     linksOffline( '../../../cascading-local', "http://${rootProject.s3UploadDocs.destination}javadoc/cascading-local".toString() )
   }
 }
+
+apply plugin: 'maven'
+task createPom << {
+  pom { }.writeTo("pom-wip-dev.xml")
+}

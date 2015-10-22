@@ -38,3 +38,8 @@ javadoc {
     linksOffline( '../../../cascading-core', "http://${rootProject.s3UploadDocs.destination}javadoc/cascading-core".toString() )
   }
 }
+
+apply plugin: 'maven'
+task createPom << {
+  pom { }.writeTo("pom-wip-dev.xml")
+}

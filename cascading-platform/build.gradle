@@ -65,3 +65,8 @@ javadoc {
 }
 
 platformTest.enabled = false
+
+apply plugin: 'maven'
+task createPom << {
+  pom { }.writeTo("pom-wip-dev.xml")
+}
